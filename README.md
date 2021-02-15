@@ -1,6 +1,6 @@
 
 # crc16
-[![Coverage Status](https://coveralls.io/repos/r10r/crc16/badge.svg?branch=master&service=github)](https://coveralls.io/github/r10r/crc16?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/r10r/crc16/badge.svg?branch=master)](https://coveralls.io/github/r10r/crc16?branch=master)
 [![Go Reference](https://pkg.go.dev/badge/github.com/r10r/crc16.svg)](https://pkg.go.dev/github.com/r10r/crc16)
 
 Go implementation of CRC-16 calculation for majority of widely-used polynomials.</br>
