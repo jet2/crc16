@@ -1,3 +1,4 @@
+name: Generate code coverage
 on: [push, pull_request]
 jobs:
 
