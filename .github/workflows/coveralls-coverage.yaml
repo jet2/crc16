@@ -1,7 +1,6 @@
 name: Generate code coverage
 on: [push, pull_request]
 jobs:
-
   test:
     runs-on: ubuntu-latest
     strategy:
