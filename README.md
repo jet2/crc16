@@ -18,7 +18,7 @@ import (
 )
 
 func main() {
-	table := crc16.MakeTable(crc16.CRC16_MAXIM)
+	table := crc16.MakeTable(crc16.XMODEM)
 
 	crc := crc16.Checksum([]byte("Hello world!"), table)
 	fmt.Printf("CRC-16 MAXIM: %X\n", crc)

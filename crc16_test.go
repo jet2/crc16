@@ -7,7 +7,7 @@ import (
 
 var testData = []byte("123456789")
 
-func testSelectedCRC(params Params, t *testing.T) {
+func testChecksum(t *testing.T, params Params) {
 	table := MakeTable(params)
 	if table == nil {
 		t.Errorf("Failed to create %q computer", params.Name)
@@ -20,100 +20,100 @@ func testSelectedCRC(params Params, t *testing.T) {
 	}
 }
 
-func TestCRC16_ARC(t *testing.T) {
-	testSelectedCRC(CRC16_ARC, t)
+func TestChecksum_ARC(t *testing.T) {
+	testChecksum(t, ARC)
 }
 
-func TestCRC16_AUG_CCIT(t *testing.T) {
-	testSelectedCRC(CRC16_AUG_CCITT, t)
+func TestChecksum_AUGCCIT(t *testing.T) {
+	testChecksum(t, AUGCCITT)
 }
 
-func TestCRC16_BUYPASS(t *testing.T) {
-	testSelectedCRC(CRC16_BUYPASS, t)
+func TestChecksum_BUYPASS(t *testing.T) {
+	testChecksum(t, BUYPASS)
 }
 
-func TestCRC16_CCITT_FALSE(t *testing.T) {
-	testSelectedCRC(CRC16_CCITT_FALSE, t)
+func TestChecksum_CCITTFALSE(t *testing.T) {
+	testChecksum(t, CCITTFALSE)
 }
 
-func TestCRC16_CDMA2000(t *testing.T) {
-	testSelectedCRC(CRC16_CDMA2000, t)
+func TestChecksum_CDMA2000(t *testing.T) {
+	testChecksum(t, CDMA2000)
 }
 
-func TestCRC16_DDS_110(t *testing.T) {
-	testSelectedCRC(CRC16_DDS_110, t)
+func TestChecksum_DDS110(t *testing.T) {
+	testChecksum(t, DDS110)
 }
 
-func TestCRC16_DECT_R(t *testing.T) {
-	testSelectedCRC(CRC16_DECT_R, t)
+func TestChecksum_DECTR(t *testing.T) {
+	testChecksum(t, DECTR)
 }
 
-func TestCRC16_DECT_X(t *testing.T) {
-	testSelectedCRC(CRC16_DECT_X, t)
+func TestChecksum_DECTX(t *testing.T) {
+	testChecksum(t, DECTX)
 }
 
-func TestCRC16_DNP(t *testing.T) {
-	testSelectedCRC(CRC16_DNP, t)
+func TestChecksum_DNP(t *testing.T) {
+	testChecksum(t, DNP)
 }
 
-func TestCRC16_EN_13757(t *testing.T) {
-	testSelectedCRC(CRC16_EN_13757, t)
+func TestChecksum_EN13757(t *testing.T) {
+	testChecksum(t, EN13757)
 }
 
-func TestCRC16_GENIBUS(t *testing.T) {
-	testSelectedCRC(CRC16_GENIBUS, t)
+func TestChecksum_GENIBUS(t *testing.T) {
+	testChecksum(t, GENIBUS)
 }
 
-func TestCRC16_MAXIM(t *testing.T) {
-	testSelectedCRC(CRC16_MAXIM, t)
+func TestChecksum_MAXIM(t *testing.T) {
+	testChecksum(t, MAXIM)
 }
 
-func TestCRC16_MCRF4XX(t *testing.T) {
-	testSelectedCRC(CRC16_MCRF4XX, t)
+func TestChecksum_MCRF4XX(t *testing.T) {
+	testChecksum(t, MCRF4XX)
 }
 
-func TestCRC16_RIELLO(t *testing.T) {
-	testSelectedCRC(CRC16_RIELLO, t)
+func TestChecksum_RIELLO(t *testing.T) {
+	testChecksum(t, RIELLO)
 }
 
-func TestCRC16_T10_DIF(t *testing.T) {
-	testSelectedCRC(CRC16_T10_DIF, t)
+func TestChecksum_T10DIF(t *testing.T) {
+	testChecksum(t, T10DIF)
 }
 
-func TestCRC16_TELEDISK(t *testing.T) {
-	testSelectedCRC(CRC16_TELEDISK, t)
+func TestChecksum_TELEDISK(t *testing.T) {
+	testChecksum(t, TELEDISK)
 }
 
-func TestCRC16_TMS37157(t *testing.T) {
-	testSelectedCRC(CRC16_TMS37157, t)
+func TestChecksum_TMS37157(t *testing.T) {
+	testChecksum(t, TMS37157)
 }
 
-func TestCRC16_USB(t *testing.T) {
-	testSelectedCRC(CRC16_USB, t)
+func TestChecksum_USB(t *testing.T) {
+	testChecksum(t, USB)
 }
 
-func TestCRC16_CRC_A(t *testing.T) {
-	testSelectedCRC(CRC16_CRC_A, t)
+func TestChecksum_CRCA(t *testing.T) {
+	testChecksum(t, CRCA)
 }
 
-func TestCRC16_KERMIT(t *testing.T) {
-	testSelectedCRC(CRC16_KERMIT, t)
+func TestChecksum_KERMIT(t *testing.T) {
+	testChecksum(t, KERMIT)
 }
 
-func TestCRC16_MODBUS(t *testing.T) {
-	testSelectedCRC(CRC16_MODBUS, t)
+func TestChecksum_MODBUS(t *testing.T) {
+	testChecksum(t, MODBUS)
 }
 
-func TestCRC16_X_25(t *testing.T) {
-	testSelectedCRC(CRC16_X_25, t)
+func TestChecksum_X25(t *testing.T) {
+	testChecksum(t, X25)
 }
 
-func TestCRC16_XMODEM(t *testing.T) {
-	testSelectedCRC(CRC16_XMODEM, t)
+func TestChecksum_XMODEM(t *testing.T) {
+	testChecksum(t, XMODEM)
 }
 
 func TestHash(t *testing.T) {
-	tbl := MakeTable(CRC16_XMODEM)
+	tbl := MakeTable(XMODEM)
 	h := New(tbl)
 
 	fmt.Fprint(h, "standard")
