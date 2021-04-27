@@ -45,6 +45,7 @@ var (
 	CRC16_MODBUS      = Params{0x8005, 0xFFFF, true, true, 0x0000, 0x4B37, "CRC-16/MODBUS"}
 	CRC16_X_25        = Params{0x1021, 0xFFFF, true, true, 0xFFFF, 0x906E, "CRC-16/X-25"}
 	CRC16_XMODEM      = Params{0x1021, 0x0000, false, false, 0x0000, 0x31C3, "CRC-16/XMODEM"}
+	CRC16_DF1         = Params{0x8005, 0x0000, true, true, 0x0000, 0x4B37, "CRC-16/DF1"}
 )
 
 // Table is a 256-word table representing polinomial and algorithm settings for efficient processing.

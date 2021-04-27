@@ -1,3 +1,3 @@
-module github.com/r10r/crc16
+module github.com/jet2/crc16
 
 go 1.11
